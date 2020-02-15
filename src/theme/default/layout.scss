@@ -1,0 +1,39 @@
+$layout-spacing-xxxxsm: 5px;
+$layout-spacing-xxxsm: 6.5px;
+$layout-spacing-xxsm: 8.5px;
+$layout-spacing-xsm: 12.5px;
+$layout-spacing-sm: 15px;
+$layout-spacing-md: 25px;
+$layout-spacing-lg: 30px;
+$layout-spacing-xlg: 45px;
+$layout-spacing-xxlg: 90px;
+$layout-spacing-xxxlg: 105px;
+
+$layout-border-radius-smooth: 1px;
+$layout-border-radius-button: 1.5px;
+$layout-border-radius-md: 5px;
+$layout-border-radius-lg: 10px;
+
+$layout-grow-factor-button: 1.1;
+$layout-grow-factor-share-button: 1.1;
+
+$layout-border-width-xsm: 1px;
+$layout-border-width-sm: 3px;
+$layout-border-width-md: 5px;
+
+$layout-portrait-width: 576px;
+$layout-app-width: 768px;
+$layout-mid-width: 992px;
+$layout-lg-width: 1200px;
+
+$layout-z-index-top: 15;
+$layout-z-index-mid: 10;
+$layout-z-index-low: 5;
+
+%layout-absolute-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

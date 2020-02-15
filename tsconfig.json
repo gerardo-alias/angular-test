@@ -2,6 +2,17 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@app/*": [ "src/app" ],
+      "@assets/*": [ "src/assets" ],
+      "@components/*": [ "src/components" ],
+      "@config/*": [ "src/config" ],
+      "@model/*": [ "src/model" ],
+      "@services/*": [ "src/services" ],
+      "@theme/*": [ "src/theme" ],
+      "@utils/*": [ "src/utils" ],
+      "@views/*": [ "src/views" ]
+    },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./dist/out-tsc",

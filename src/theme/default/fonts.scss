@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Monserrat Regular';
+  src: local('FiraSans'), url('/assets/fonts/Montserrat-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Monserrat Semibold';
+  src: local('FiraSans'), url('/assets/fonts/Montserrat-SemiBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Monserrat Bold';
+  src: local('FiraSans'), url('/assets/fonts/Montserrat-Bold.otf') format('truetype');
+}
+
+%fonts-ff-regular {
+  font-family: 'Monserrat Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+%fonts-ff-semibold {
+  font-family: 'Monserrat Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+%fonts-ff-bold {
+  font-family: 'Monserrat Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+%fonts-ff-alt-regular {
+  font-family: 'Roboto', sans-serif;
+}
+
+%fonts-ff-alt-medium {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+%fonts-ff-alt-medium-black {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+%fonts-ff-alt-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+%fonts-ff-alt-black {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+$font-size-xxxsm: 6px;
+$font-size-xxsm: 8px;
+$font-size-xsm: 10px;
+$font-size-sm: 12px;
+$font-size-smd: 14px;
+$font-size-md: 15px;
+$font-size-lg: 18px;
+$font-size-xlg: 25px;
+$font-size-xxlg: 30px;
+$font-size-xxxlg: 37.5px;
+$font-size-xxxxlg: 45px;
+$font-size-important: 60px;
+
+%fonts-size-xxxsm {
+  font-size: $font-size-xxxsm;
+  line-height: 8px;
+}
+
+%fonts-size-xxsm {
+  font-size: $font-size-xxsm;
+  line-height: 10px;
+};
+
+%fonts-size-xsm {
+  font-size: $font-size-xsm;
+  line-height: 11px;
+};
+
+%fonts-size-sm {
+  font-size: $font-size-sm;
+  line-height: 12px;
+};
+
+%fonts-size-smd {
+  font-size: $font-size-smd;
+  line-height: 14px;
+};
+
+%fonts-size-md {
+  font-size: $font-size-md;
+  line-height: 15px;
+};
+
+%fonts-size-lg {
+  font-size: $font-size-lg;
+  line-height: 18px;
+};
+
+%fonts-size-xlg {
+  font-size: $font-size-xlg;
+  line-height: 25px;
+};
+
+%fonts-size-xxlg {
+  font-size: $font-size-xxlg;
+  line-height: 30px;
+};
+
+%fonts-size-xxxlg {
+  font-size: $font-size-xxxlg;
+  line-height: 1.2em;
+};
+
+%fonts-size-xxxxlg {
+  font-size: $font-size-xxxxlg;
+  line-height: 1.2em;
+};
+
+%fonts-size-important {
+  font-size: $font-size-important;
+  line-height: 70px;
+};
+
+%fonts-size-special-subhead {
+  font-size: 14px;
+  line-height: 1.43em;
+}
+
+@mixin font-format($font-family, $font-size) {
+  @extend %fonts-ff-#{$font-family};
+  @extend %fonts-size-#{$font-size};
+}
