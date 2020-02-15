@@ -1,0 +1,4 @@
+{
+  "typescript.reportStyleChecksAsWarnings": false,
+  "tslint.alwaysShowRuleFailuresAsWarnings": false
+}
