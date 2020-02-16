@@ -1,0 +1,5 @@
+<div class="movies-list__container">
+  <ng-template ngFor let-movie [ngForOf]="movies" >
+    <app-movie-card [movie]="movie"></app-movie-card>
+  </ng-template>
+</div>

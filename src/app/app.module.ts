@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { MovieCardComponent } from '@components/movie-card/movie-card.component';
 import { ButtonComponent } from '@components/button/button.component';
 import { MovieCardFooterComponent } from '@components/movie-card-footer/movie-card-footer.component';
+import { MoviesListComponent } from '@components/movies-list/movies-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieCardComponent,
     ButtonComponent,
-    MovieCardFooterComponent
+    MovieCardFooterComponent,
+    MoviesListComponent
   ],
   imports: [
     AppRoutingModule,

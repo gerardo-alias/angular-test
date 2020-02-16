@@ -3,7 +3,7 @@
   class="movie-card__container" >
   <div
     *ngIf="isApp" >
-    <p class="movie-card__name">{{movie.name}}</p>
+    <p class="movie-card__name">{{movie.title}}</p>
   </div>
   <div
   fxLayout="row">
@@ -14,9 +14,9 @@
     <div
       class="movie-card__data-area" >
       <div *ngIf="!isApp">
-        <p class="movie-card__name">{{movie.name}}</p>
+        <p class="movie-card__name">{{movie.title}}</p>
       </div>
-      <p class="movie-card__description">{{movie.description}}</p>
+      <p class="movie-card__description">{{movie.overview}}</p>
       <div
         *ngIf="!isApp"
         class="movie-card__footer-area">

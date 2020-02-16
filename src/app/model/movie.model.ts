@@ -1,5 +1,7 @@
 export interface Movie {
-  description: string;
-  name: string;
+  hasTrailer: boolean;
+  id: number;
+  overview: string;
   posterPath: string;
+  title: string;
 }
