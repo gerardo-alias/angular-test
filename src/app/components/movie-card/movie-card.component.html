@@ -1,0 +1,32 @@
+<div
+  fxLayout="column"
+  class="movie-card__container" >
+  <div
+    *ngIf="isApp" >
+    <p class="movie-card__name">{{movie.name}}</p>
+  </div>
+  <div
+  fxLayout="row">
+    <img
+      class="movie-card__poster"
+      flex="30"
+      src={{movie.posterPath}}/>
+    <div
+      class="movie-card__data-area" >
+      <div *ngIf="!isApp">
+        <p class="movie-card__name">{{movie.name}}</p>
+      </div>
+      <p class="movie-card__description">{{movie.description}}</p>
+      <div
+        *ngIf="!isApp"
+        class="movie-card__footer-area">
+        <app-movie-card-footer></app-movie-card-footer>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="isApp"
+    class="movie-card__footer-bottom" >
+    <app-movie-card-footer></app-movie-card-footer>
+  </div>
+</div>

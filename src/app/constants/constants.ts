@@ -1,0 +1,5 @@
+export const APP_BREAKPOINT = 576;
+export const I18_DEFAULT_TRANSLATION = '####';
+export const I18_KEY_SEPARATOR = '-';
+export const I18_LANG_EN = 'en';
+export const I18N_REPLACEMENT_WILDCARD = '%s';

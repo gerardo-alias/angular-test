@@ -1,0 +1,20 @@
+@import 'current-theme.scss';
+
+.movie-card-footer {
+  &__container {
+    width: 100%;
+  }
+
+  &__button-slot {
+    width: 100%;
+    padding-top: $layout-spacing-xxxsm;
+
+    &--left {
+      margin-right: $layout-spacing-xsm;
+    }
+
+    &--right {
+      margin-left: $layout-spacing-xsm;
+    }
+  }
+}

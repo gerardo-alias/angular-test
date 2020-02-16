@@ -1,0 +1,57 @@
+@import 'current-theme.scss';
+
+.movie-card {
+  &__container {
+    max-width: $layout-movie-card-max-width;
+
+    padding: $layout-spacing-md $layout-spacing-lg;
+    margin: $layout-spacing-sm;
+
+    border-radius: $layout-border-radius-md;
+    background-color: $colors-background-card;
+  }
+
+  &__poster {
+    max-height: $layout-poster-max-height;
+    width: $layout-movie-poster-width;
+    border-radius: $layout-border-radius-md;
+
+    @media screen and (max-width: $layout-portrait-width) {
+      width: $layout-movie-poster-width-app;
+    }
+  }
+
+  &__data-area {
+    position: relative;
+    margin-left: $layout-spacing-lg;
+  }
+
+  &__name {
+    @include font-format('bold', 'xlg');
+    letter-spacing: $fonts-letter-spacing-lg;
+    margin: $layout-spacing-sm 0;
+
+    color: $colors-font-disclaimer;
+  }
+
+  &__description {
+    @include font-format('regular', 'md');
+    letter-spacing: $fonts-letter-spacing-sm;
+    margin-top: 0;
+
+    color: $colors-font-active;
+  }
+
+  &__footer-area {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+  }
+
+  &__footer-bottom {
+    margin-top: $layout-spacing-sm;
+  }
+}

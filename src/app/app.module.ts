@@ -1,16 +1,30 @@
+// vendors
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
+// router
 import { AppRoutingModule } from './app-routing.module';
+
+// components
 import { AppComponent } from './app.component';
+import { MovieCardComponent } from '@components/movie-card/movie-card.component';
+import { ButtonComponent } from '@components/button/button.component';
+import { MovieCardFooterComponent } from '@components/movie-card-footer/movie-card-footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieCardComponent,
+    ButtonComponent,
+    MovieCardFooterComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+     FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

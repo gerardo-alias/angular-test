@@ -1,0 +1,21 @@
+@import 'current-theme.scss';
+
+.button {
+  &__container {
+    display: block;
+  }
+
+  &__element {
+    height: 100%;
+    width: 100%;
+    padding: $layout-spacing-xsm $layout-spacing-sm;
+
+    border-radius: $layout-border-radius-button;
+    background-color: $colors-background-button;
+
+    @include font-format('alt-bold', 'xsm');
+    letter-spacing: $fonts-letter-spacing-lg;
+    color: $colors-font-active;
+    text-transform: uppercase;
+  }
+}

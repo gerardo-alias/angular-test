@@ -30,6 +30,11 @@ $layout-z-index-top: 15;
 $layout-z-index-mid: 10;
 $layout-z-index-low: 5;
 
+$layout-movie-card-max-width: 600px;
+$layout-movie-poster-width: 150px;
+$layout-movie-poster-width-app: 100px;
+$layout-poster-max-height: 230px;
+
 %layout-absolute-fill {
   position: absolute;
   top: 0;
