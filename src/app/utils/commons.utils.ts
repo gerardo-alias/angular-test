@@ -5,3 +5,7 @@ export const getDataElement = (object: object | Array<any>, path: string, defaul
   const dataElement = get(object, path, defaultValue);
   return (dataElement === undefined || dataElement === null) ? defaultValue : dataElement;
 };
+
+export const limitTextLength = (maxLength: number, text: string = '') => (
+  text.length > maxLength ? `${text.substring(0, maxLength)}...` : text
+);

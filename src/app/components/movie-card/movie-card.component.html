@@ -7,25 +7,22 @@
   </div>
   <div
   fxLayout="row">
-    <img
+    <div class="movie-card__poster_area">
+      <img
       class="movie-card__poster"
-      flex="30"
-      src={{movie.posterPath}}/>
+        src={{movie.posterPath}}/>
+    </div>
     <div
+      *ngIf="!isApp"
       class="movie-card__data-area" >
-      <div *ngIf="!isApp">
-        <p class="movie-card__name">{{movie.title}}</p>
-      </div>
+      <p class="movie-card__name">{{movie.title}}</p>
       <p class="movie-card__description">{{movie.overview}}</p>
-      <div
-        *ngIf="!isApp"
-        class="movie-card__footer-area">
-        <app-movie-card-footer></app-movie-card-footer>
-      </div>
     </div>
   </div>
+  <div *ngIf="isApp">
+    <p class="movie-card__description">{{movie.overview}}</p>
+  </div>
   <div
-    *ngIf="isApp"
     class="movie-card__footer-bottom" >
     <app-movie-card-footer></app-movie-card-footer>
   </div>

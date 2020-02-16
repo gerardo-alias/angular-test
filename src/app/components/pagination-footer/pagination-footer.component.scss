@@ -1,0 +1,49 @@
+@import 'current-theme.scss';
+
+.pagination-bar {
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background-color: $colors-background-card;
+
+    padding: $layout-spacing-sm $layout-spacing-lg;
+  }
+
+  &__page-indicator {
+    background-color: $colors-background-contrast;
+    padding: $layout-spacing-xxsm $layout-spacing-sm;
+    margin: 0 $layout-spacing-sm;
+    width: $layout-page-indicator-width;
+    border-radius: $layout-border-radius-md;
+
+    @include font-format('semibold', 'md');
+    color: $colors-font-contrast;
+
+    text-align: center;
+  }
+
+  &__button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    height: 100%;
+
+    @include font-format('regular', 'xxlg');
+    color: $colors-font-active;
+
+    transform: scaleY(1.5);
+
+    &--disabled {
+      opacity: 0.3;
+    }
+  }
+}

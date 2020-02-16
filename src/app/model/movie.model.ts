@@ -5,3 +5,9 @@ export interface Movie {
   posterPath: string;
   title: string;
 }
+
+export interface TrendingMoviesResponse {
+  page: number;
+  totalPages: number;
+  movies: Movie[]
+}

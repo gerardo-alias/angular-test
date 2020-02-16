@@ -6,6 +6,8 @@
   }
 
   &__element {
+    cursor: pointer;
+
     height: 100%;
     width: 100%;
     padding: $layout-spacing-xsm $layout-spacing-sm;

@@ -25,6 +25,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
     "rxjs": "~6.5.4",
+    "rxjs-observe": "^2.1.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

@@ -1,0 +1,12 @@
+@import 'current-theme.scss';
+
+.loader {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+  }
+}

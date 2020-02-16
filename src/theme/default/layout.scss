@@ -30,10 +30,15 @@ $layout-z-index-top: 15;
 $layout-z-index-mid: 10;
 $layout-z-index-low: 5;
 
-$layout-movie-card-max-width: 600px;
-$layout-movie-poster-width: 150px;
-$layout-movie-poster-width-app: 100px;
-$layout-poster-max-height: 230px;
+$layout-movie-card-max-width: 550px;
+$layout-movie-poster-height-app: calc($layout-movie-poster-width-app / 2/3);
+$layout-movie-poster-width-app: 200px;
+$layout-poster-height: calc($layout-poster-width / 2/3);
+$layout-poster-width: 150px;
+$layout-page-indicator-width: 75px;
+
+$layout_loader_height: 75px;
+$layout_loader_width: 75px;
 
 %layout-absolute-fill {
   position: absolute;

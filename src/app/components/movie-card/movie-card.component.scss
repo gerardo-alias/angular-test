@@ -2,7 +2,11 @@
 
 .movie-card {
   &__container {
-    max-width: $layout-movie-card-max-width;
+    width: $layout-movie-card-max-width;
+
+    @media screen and (max-width: $layout-portrait-width) {
+      width: auto;
+    }
 
     padding: $layout-spacing-md $layout-spacing-lg;
     margin: $layout-spacing-sm;
@@ -12,12 +16,24 @@
   }
 
   &__poster {
-    max-height: $layout-poster-max-height;
-    width: $layout-movie-poster-width;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__poster_area {
+    position: relative;
+
+    height: $layout-poster-height;
+    width: $layout-poster-width;
+
+    align-items: center;
+    justify-content: center;
+
     border-radius: $layout-border-radius-md;
 
     @media screen and (max-width: $layout-portrait-width) {
       width: $layout-movie-poster-width-app;
+      margin: 0 auto $layout-spacing-md;
     }
   }
 
@@ -33,11 +49,14 @@
     margin: $layout-spacing-sm 0;
 
     color: $colors-font-disclaimer;
+
+    @media screen and (max-width: $layout-portrait-width) {
+      text-align: center;
+    }
   }
 
   &__description {
-    @include font-format('regular', 'md');
-    letter-spacing: $fonts-letter-spacing-sm;
+    @include font-format('regular', 'sm');
     margin-top: 0;
 
     color: $colors-font-active;

@@ -14,7 +14,6 @@ export class MoviesListComponent implements OnInit {
   @Input() movies: Observable<Movie[]>;
 
   constructor() {
-    console.log(this.movies);
   }
 
   ngOnInit(): void {

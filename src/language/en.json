@@ -1,4 +1,8 @@
 {
+  "errors": {
+    "trendingPageErrorDesc": "Something went wrong while loading data, please try again in a few minutes.",
+    "trendingPageErrorTitle": "Ups! An error has ocurred..."
+  },
   "movieCard": {
     "fav": "Add to Favs",
     "viewTrailer": "View trailer"

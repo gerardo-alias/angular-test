@@ -1,0 +1,35 @@
+@import 'current-theme.scss';
+
+.empty-state {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__error-card {
+    max-width: $layout-movie-card-max-width;
+
+    padding: $layout-spacing-md $layout-spacing-lg;
+    margin: $layout-spacing-sm;
+
+    border-radius: $layout-border-radius-md;
+    background-color: $colors-background-card;
+  }
+
+  &__title {
+    @include font-format('bold', 'xlg');
+    letter-spacing: $fonts-letter-spacing-lg;
+
+    color: $colors-font-disclaimer;
+  }
+
+  &__description {
+    @include font-format('regular', 'lg');
+
+    color: $colors-font-active;
+  }
+}

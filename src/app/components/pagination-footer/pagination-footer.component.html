@@ -1,0 +1,20 @@
+<div
+  class="pagination-bar__container"
+  fxLayout="row">
+  <button
+    class="pagination-bar__button"
+    [class.pagination-bar__button--disabled]="!prevEnabled"
+    [disabled]="!prevEnabled"
+    (click)="onClickPrev()">
+    &lt;
+  </button>
+  <p class="pagination-bar__page-indicator">{{currentPage}}</p>
+  <button
+    class="pagination-bar__button"
+    [class.pagination-bar__button--disabled]="!nextEnabled"
+    [disabled]="!nextEnabled"
+    (click)="onClickNext()">
+    &gt;
+  </button>
+  <p class="pagination-bar__page-indicator">{{totalPages}}</p>
+</div>
