@@ -22,7 +22,6 @@
 
   &__poster_area {
     position: relative;
-
     height: $layout-poster-height;
     width: $layout-poster-width;
 
@@ -30,8 +29,10 @@
     justify-content: center;
 
     border-radius: $layout-border-radius-md;
+    overflow: hidden;
 
     @media screen and (max-width: $layout-portrait-width) {
+      height: $layout-movie-poster-height-app;
       width: $layout-movie-poster-width-app;
       margin: 0 auto $layout-spacing-md;
     }

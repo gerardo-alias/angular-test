@@ -16,6 +16,7 @@ import { Movie } from '@model/movie.model';
 export class MovieCardComponent implements OnInit {
   @Input() movie: Movie;
   isApp: boolean;
+  defaultImgPath = '/assets/images/film-poster-placeholder.png';
 
   constructor() {
     this.onResize();

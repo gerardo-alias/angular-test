@@ -34,7 +34,8 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/config/",
-                "assets/fonts"
+                "assets/fonts",
+                "assets/images"
               ]
             },
             "scripts": []

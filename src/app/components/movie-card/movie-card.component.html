@@ -9,8 +9,8 @@
   fxLayout="row">
     <div class="movie-card__poster_area">
       <img
-      class="movie-card__poster"
-        src={{movie.posterPath}}/>
+        class="movie-card__poster"
+        [src]="movie.posterPath ? movie.posterPath : defaultImgPath"/>
     </div>
     <div
       *ngIf="!isApp"
