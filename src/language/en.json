@@ -6,5 +6,8 @@
   "movieCard": {
     "fav": "Add to Favs",
     "viewTrailer": "View trailer"
+  },
+  "searchInput": {
+    "placeholder": "Search for some movies!"
   }
 }

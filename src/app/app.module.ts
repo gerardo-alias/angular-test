@@ -15,12 +15,13 @@ import { MovieCardComponent } from '@components/movie-card/movie-card.component'
 import { ButtonComponent } from '@components/button/button.component';
 import { MovieCardFooterComponent } from '@components/movie-card-footer/movie-card-footer.component';
 import { MoviesListComponent } from '@components/movies-list/movies-list.component';
+import { LoaderComponent } from '@components/loader/loader.component';
+import { EmptyStateComponent } from '@components/empty-state/empty-state.component';
+import { PaginationFooterComponent } from '@components/pagination-footer/pagination-footer.component';
+import { SearchInputComponent } from '@components/search-input/search-input.component';
 
 // views
 import { TrendingViewComponent } from '@views/trending-view/trending-view.component';
-import { LoaderComponent } from '@components/loader/loader.component';
-import { EmptyStateComponent } from './components/empty-state/empty-state.component';
-import { PaginationFooterComponent } from './components/pagination-footer/pagination-footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PaginationFooterComponent } from './components/pagination-footer/pagina
     TrendingViewComponent,
     LoaderComponent,
     EmptyStateComponent,
-    PaginationFooterComponent
+    PaginationFooterComponent,
+    SearchInputComponent
   ],
   imports: [
     AppRoutingModule,

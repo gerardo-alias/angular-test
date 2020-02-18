@@ -22,13 +22,14 @@ const mapMovies = (moviesData: Record<string, any>[]): Movie[] => {
   }));
 };
 
-export const mapTrendingMovies = (trendingMovies: Record<string, any> = {}): TrendingMoviesResponse => {
+export const mapTrendingMovies = (trendingMovies: Record<string, any> = {}, searchValue: string = ''): TrendingMoviesResponse => {
   const page = getDataElement(trendingMovies, 'page', 0);
   const totalPages = getDataElement(trendingMovies, 'total_pages', 0);
 
   return {
     movies: mapMovies(getDataElement(trendingMovies, 'results', [])),
     page,
-    totalPages
+    totalPages,
+    searchValue
   };
 };

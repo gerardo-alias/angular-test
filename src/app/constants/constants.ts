@@ -5,3 +5,4 @@ export const I18_LANG_EN = 'en';
 export const I18N_REPLACEMENT_WILDCARD = '%s';
 export const MOVIE_OVERVIEW_MAX_LENGTH = 200;
 export const MOVIE_TITLE_MAX_LENGTH = 40;
+export const SEARCH_INPUT_DEBOUNCE_TIME = 1500;

@@ -3,6 +3,9 @@
 .trending-view {
   &__container {
     height: 100%;
-    width: 100%;
+    max-width: $layout-trending-page-max-width;
+
+    margin: 0 auto;
+    padding: $layout-spacing-xlg $layout-spacing-sm;
   }
 }

@@ -1,0 +1,29 @@
+@import 'current-theme.scss';
+
+.search-inpit {
+  &__container {
+    max-width: $layout-movie-card-max-width;
+    padding: $layout-spacing-md $layout-spacing-sm;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $layout-spacing-xsm $layout-spacing-sm;
+
+    text-align: center;
+
+    background-color: transparent;
+
+    border: none;
+    border-bottom: $layout-border-width-sm solid $colors-background-link;
+
+    @include font-format('semibold', 'lg');
+    color: $colors-font-active;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -24,16 +24,29 @@ export class TrendingViewComponent implements OnInit {
   error: boolean;
   success: boolean;
   movies: Movie[] = [];
+  searchValue = '';
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService) {
+    moviesService.getSearchValue()
+      .subscribe(this.onSearchValueChange);
+  }
 
   ngOnInit(): void {
     this.getMovies();
   }
 
   getMovies = (): void => {
-    this.moviesService.getTrendingMovies(this.currentPage, this.onStartLoading)
+    this.moviesService.getTrendingMovies(this.currentPage, this.onStartLoading, this.searchValue)
       .subscribe(this.onLoadSuccess, this.onLoadError);
+  }
+
+  onSearchValueChange = (searchValue: string): void => {
+    if (this.searchValue !== searchValue) {
+      this.currentPage = 1;
+      this.totalPages = 1;
+      this.searchValue = searchValue;
+      this.getMovies();
+    }
   }
 
   onStartLoading = (): void => {

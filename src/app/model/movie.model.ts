@@ -9,5 +9,6 @@ export interface Movie {
 export interface TrendingMoviesResponse {
   page: number;
   totalPages: number;
-  movies: Movie[]
+  movies: Movie[];
+  searchValue?: string;
 }
