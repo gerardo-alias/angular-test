@@ -18,17 +18,22 @@ import { formatText } from '@utils/i18n.utils';
 export class TrendingViewComponent implements OnInit {
   currentPage = 1;
   totalPages = 1;
-  errorDescription: string = formatText('errors-trendingPageErrorDesc');
-  errorTitle: string = formatText('errors-trendingPageErrorTitle');
   isFetching: boolean;
   error: boolean;
   success: boolean;
   movies: Movie[] = [];
   searchValue = '';
+  errorDescription: string = formatText('errors-trendingPageErrorDesc');
+  errorTitle: string = formatText('errors-trendingPageErrorTitle');
+  emptyTitle: string = formatText('errors-trendingPageEmptyTitle');
 
   constructor(private moviesService: MoviesService) {
     moviesService.getSearchValue()
       .subscribe(this.onSearchValueChange);
+  }
+
+  get emptyDescription() {
+    return formatText('errors-trendingPageEmptyDesc', [ this.searchValue ]);
   }
 
   ngOnInit(): void {

@@ -1,5 +1,7 @@
 {
   "errors": {
+    "trendingPageEmptyDesc": "No results were found for %s. Please try with a different search value.",
+    "trendingPageEmptyTitle": "Ups! There were no results",
     "trendingPageErrorDesc": "Something went wrong while loading data, please try again in a few minutes.",
     "trendingPageErrorTitle": "Ups! An error has ocurred..."
   },

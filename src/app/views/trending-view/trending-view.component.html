@@ -1,29 +1,30 @@
 <div
   class="trending-view__container">
   <app-search-input></app-search-input>
-  <app-pagination-footer
-    [currentPage]="currentPage"
-    [totalPages]="totalPages"
-    [onClickPrev]="handleClickPrev"
-    [onClickNext]="handleClickNext">
-  </app-pagination-footer>
-  <app-loader [isVisible]="isFetching"></app-loader>
-  <app-empty-state
-    [isVisible]="error"
-    [errorDescription]="errorDescription"
-    [errorTitle]="errorTitle"
-  ></app-empty-state>
-  <div
-    *ngIf="success">
-    <app-movies-list [movies]="movies"></app-movies-list>
-  </div>
-  <div
-    *ngIf="!isFetching">
-    <app-pagination-footer
-      [currentPage]="currentPage"
-      [totalPages]="totalPages"
-      [onClickPrev]="handleClickPrev"
-      [onClickNext]="handleClickNext">
-    </app-pagination-footer>
+  <div class="trending-view__content">
+    <app-loader [isVisible]="isFetching"></app-loader>
+    <app-empty-state
+      [isVisible]="error"
+      [errorDescription]="errorDescription"
+      [errorTitle]="errorTitle"
+    ></app-empty-state>
+    <app-empty-state
+      [isVisible]="success && movies.length === 0"
+      [errorDescription]="emptyDescription"
+      [errorTitle]="emptyTitle"
+    ></app-empty-state>
+    <div
+      *ngIf="success">
+      <app-movies-list [movies]="movies"></app-movies-list>
+    </div>
+    <div
+      *ngIf="!isFetching && !(success && movies.length === 0)">
+      <app-pagination-footer
+        [currentPage]="currentPage"
+        [totalPages]="totalPages"
+        [onClickPrev]="handleClickPrev"
+        [onClickNext]="handleClickNext">
+      </app-pagination-footer>
+    </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 // vendors
 import { Component, Input, OnInit } from '@angular/core';
 
+// utils
+import { scrollToTop } from '@utils/layout.utils';
+
 @Component({
   selector: 'app-pagination-footer',
   templateUrl: './pagination-footer.component.html',
@@ -23,5 +26,15 @@ export class PaginationFooterComponent implements OnInit {
 
   get prevEnabled(): boolean {
     return this.currentPage > 1;
+  }
+
+  handleClickNext(): void {
+    scrollToTop();
+    this.onClickNext();
+  }
+
+  handleClickPrev(): void {
+    scrollToTop();
+    this.onClickPrev();
   }
 }

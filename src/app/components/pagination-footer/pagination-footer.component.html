@@ -5,7 +5,7 @@
     class="pagination-bar__button"
     [class.pagination-bar__button--disabled]="!prevEnabled"
     [disabled]="!prevEnabled"
-    (click)="onClickPrev()">
+    (click)="handleClickPrev()">
     &lt;
   </button>
   <p class="pagination-bar__page-indicator">{{currentPage}}</p>
@@ -13,7 +13,7 @@
     class="pagination-bar__button"
     [class.pagination-bar__button--disabled]="!nextEnabled"
     [disabled]="!nextEnabled"
-    (click)="onClickNext()">
+    (click)="handleClickNext()">
     &gt;
   </button>
   <p class="pagination-bar__page-indicator">{{totalPages}}</p>
