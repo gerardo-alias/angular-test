@@ -1,0 +1,16 @@
+<div
+  class="favs-view__container">
+  <app-header-bar
+    [onClickGoBack]="handleGoBack"
+    [text]="headerTitle">
+  </app-header-bar>
+  <app-empty-state
+    [isVisible]="!favs.length"
+    [errorDescription]="emptyDescription"
+    [errorTitle]="emptyTitle"
+  ></app-empty-state>
+  <div
+    *ngIf="favs.length">
+    <app-movies-list [movies]="favs"></app-movies-list>
+  </div>
+</div>

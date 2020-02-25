@@ -1,0 +1,18 @@
+@import 'current-theme.scss';
+
+.favs-view {
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: $layout-trending-page-max-width;
+
+    margin: 0 auto;
+    padding: $layout-spacing-xlg $layout-spacing-sm;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+}

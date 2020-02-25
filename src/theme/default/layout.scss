@@ -41,8 +41,12 @@ $layout-trailer-height: 700px * (9 / 16);
 $layout-trailer-width: 700px;
 $layout-trailer-app-height: unquote('calc((100vw - (#{$layout-spacing-md} * 2)) * (9 / 16))');
 $layout-trailer-app-width: unquote('calc(100vw - (#{$layout-spacing-md} * 2))');
+$layout-floating-button-size: 70px;
+$layout-fav-icon-size: 50px;
 
 $layout-animation-button-scale: 300ms ease-out;
+
+$layout-floating-button-shadow: 2px 2px rgba(255, 255, 255, .3);
 
 $layout_loader_height: 75px;
 $layout_loader_width: 75px;

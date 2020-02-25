@@ -4,6 +4,14 @@
   &__container {
     display: block;
     height: 100%;
+
+    &--floating {
+      position: fixed;
+      height: auto;
+
+      right: $layout-spacing-md;
+      bottom: $layout-spacing-md;
+    }
   }
 
   &__element {
@@ -29,6 +37,14 @@
 
     &--transparent {
       background-color: transparent;
+    }
+
+    &--floating {
+      height: $layout-floating-button-size;
+      width: $layout-floating-button-size;
+      border-radius: $layout-floating-button-size / 2;
+
+      box-shadow: $layout-floating-button-shadow;
     }
   }
 

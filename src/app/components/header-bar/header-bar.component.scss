@@ -1,0 +1,30 @@
+@import 'current-theme.scss';
+
+.header-bar {
+  &__title-area {
+    display: flex;
+    justify-content: flex-start;
+
+    width: $layout-trailer-width;
+    margin-bottom: $layout-spacing-md;
+    padding-bottom: $layout-spacing-xsm;
+    border-bottom: $layout-border-width-sm solid $colors-background-contrast;
+
+    @media screen and (max-width: $layout-app-width) {
+      width: $layout-trailer-app-width;
+    }
+  }
+
+  &__title-text {
+    padding: $layout-spacing-sm $layout-spacing-md;
+    margin: 0;
+
+    @include font-format('bold', 'xxlg');
+    color: $colors-font-disclaimer;
+
+    @media screen and (max-width: $layout-app-width) {
+      font-size: $font-size-lg;
+      line-height: 1.2em;
+    }
+  }
+}

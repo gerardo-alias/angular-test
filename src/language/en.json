@@ -5,8 +5,14 @@
     "trendingPageErrorDesc": "Something went wrong while loading data, please try again in a few minutes.",
     "trendingPageErrorTitle": "Ups! An error has ocurred..."
   },
+  "favorites": {
+    "emptyDescription": "There are no favorites yet. What are you waiting for saving some?",
+    "emptyTitle": "No favorites to show",
+    "headerTitle": "Favorites"
+  },
   "movieCard": {
     "fav": "Add to Favs",
+    "removeFav": "Remove fav",
     "viewTrailer": "View trailer"
   },
   "searchInput": {

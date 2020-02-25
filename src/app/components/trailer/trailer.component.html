@@ -1,12 +1,9 @@
 <div
   class="trailer__container">
-  <div class="trailer__title-area">
-    <app-button
-      buttonIconSrc="/assets/images/back.png"
-      transparentContainer="true"
-      [onClick]="onClickGoBack"></app-button>
-    <p class="trailer__title-text">{{movieName}}</p>
-  </div>
+  <app-header-bar
+    [onClickGoBack]="onClickGoBack"
+    [text]="movieName">
+  </app-header-bar>
   <div *ngIf="isLoading" class="trailer__loader-container">
     <app-loader [isVisible]="isLoading"></app-loader>
   </div>

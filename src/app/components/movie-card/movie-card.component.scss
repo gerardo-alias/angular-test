@@ -2,6 +2,7 @@
 
 .movie-card {
   &__container {
+    position: relative;
     width: $layout-movie-card-max-width;
 
     @media screen and (max-width: $layout-portrait-width) {
@@ -74,5 +75,16 @@
 
   &__footer-bottom {
     margin-top: $layout-spacing-sm;
+  }
+
+  &__fav-icon-wrapper {
+    position: absolute;
+
+    top: $layout-spacing-sm;
+    left: $layout-spacing-sm;
+  }
+
+  &__fav-icon {
+    height: $layout-fav-icon-size;
   }
 }

@@ -22,8 +22,10 @@ import { SearchInputComponent } from '@components/search-input/search-input.comp
 import { TrailerComponent } from '@components/trailer/trailer.component';
 
 // views
+import { FavsViewComponent } from '@views/favs-view/favs-view.component';
 import { TrailerViewComponent } from '@views/trailer-view/trailer-view.component';
 import { TrendingViewComponent } from '@views/trending-view/trending-view.component';
+import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { TrendingViewComponent } from '@views/trending-view/trending-view.compon
     PaginationFooterComponent,
     SearchInputComponent,
     TrailerViewComponent,
-    TrailerComponent
+    TrailerComponent,
+    FavsViewComponent,
+    HeaderBarComponent
   ],
   imports: [
     AppRoutingModule,

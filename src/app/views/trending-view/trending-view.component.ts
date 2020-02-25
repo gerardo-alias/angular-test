@@ -1,6 +1,10 @@
 // vendors
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+
+// constants
+import { FAVS } from '@constants/routes';
 
 // model
 import { Movie, TrendingMoviesResponse } from '@model/movie.model';
@@ -17,6 +21,7 @@ import { formatText } from '@utils/i18n.utils';
   styleUrls: ['./trending-view.component.scss']
 })
 export class TrendingViewComponent implements OnInit {
+  favIconSrc = '/assets/images/fav.png';
   isFetching: boolean;
   error: boolean;
   success: boolean;
@@ -30,8 +35,10 @@ export class TrendingViewComponent implements OnInit {
   searchValue = this.moviesService.currentSearchValue;
   totalPages = this.moviesService.totalPages;
 
-  constructor(private moviesService: MoviesService) {
-  }
+  constructor(
+    private moviesService: MoviesService,
+    private router: Router,
+  ) { }
 
   get emptyDescription() {
     return formatText('errors-trendingPageEmptyDesc', [ this.searchValue ]);
@@ -91,5 +98,9 @@ export class TrendingViewComponent implements OnInit {
       this.currentPage += 1;
       this.getMovies();
     }
+  }
+
+  handleGoToFavs = (): void => {
+    this.router.navigateByUrl(FAVS);
   }
 }

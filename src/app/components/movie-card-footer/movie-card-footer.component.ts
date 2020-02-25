@@ -12,11 +12,15 @@ import { formatText } from '@utils/i18n.utils';
 export class MovieCardFooterComponent implements OnInit {
   @Input() onClickTrailer: () => void;
   @Input() onClickAddToFavs: () => void;
+  @Input() isFav: boolean;
 
-  favButtonText: string = formatText('movieCard-fav');
   trailerButtonText: string = formatText('movieCard-viewTrailer');
 
   constructor() { }
+
+  get favButtonText(): string {
+    return !this.isFav ? formatText('movieCard-fav') : formatText('movieCard-removeFav');
+  }
 
   ngOnInit(): void {
   }

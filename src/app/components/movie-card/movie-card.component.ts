@@ -9,6 +9,9 @@ import { TRAILERS } from '@constants/routes';
 // model
 import { Movie } from '@model/movie.model';
 
+// services
+import { FavoritesService } from '@services/favorites.service';
+
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
@@ -19,9 +22,19 @@ export class MovieCardComponent implements OnInit {
   @Input() movie: Movie;
   isApp: boolean;
   defaultImgPath = '/assets/images/film-poster-placeholder.png';
+  favImgPath = '/assets/images/fav-full.png';
 
-  constructor(private router: Router) {
+  constructor(
+    private favoritesService: FavoritesService,
+    private router: Router
+  ) {
     this.onResize();
+  }
+
+  get isFav(): boolean {
+    return Boolean(this.favoritesService.favs
+      .find((favMovie: Movie): boolean => favMovie.id === this.movie.id)
+    );
   }
 
   ngOnInit(): void {
@@ -32,7 +45,12 @@ export class MovieCardComponent implements OnInit {
     this.isApp = window.innerWidth <  APP_BREAKPOINT;
   }
 
-  handleClickAddFav() {
+  handleClickAddFav = (): void => {
+    if (this.isFav) {
+      this.favoritesService.removeFav(this.movie.id);
+      return;
+    }
+    this.favoritesService.addFav(this.movie);
   }
 
   handleClickViewTrailer = (): void => {
