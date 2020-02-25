@@ -1,0 +1,33 @@
+<div
+  class="trailer__container">
+  <div class="trailer__title-area">
+    <app-button
+      buttonIconSrc="/assets/images/back.png"
+      transparentContainer="true"
+      [onClick]="onClickGoBack"></app-button>
+    <p class="trailer__title-text">{{movieName}}</p>
+  </div>
+  <div *ngIf="isLoading" class="trailer__loader-container">
+    <app-loader [isVisible]="isLoading"></app-loader>
+  </div>
+  <div *ngIf="success">
+    <ng-template ngFor let-trailerUrl [ngForOf]="trailersUrl" >
+      <iframe
+        allowfullscreen
+        class="trailer__iframe"
+        SameSite="None"
+        [src]="trailerUrl" frameborder="0" >
+      </iframe>
+    </ng-template>
+  </div>
+  <app-empty-state
+    [isVisible]="error"
+    [errorDescription]="emptyFailureDescription"
+    [errorTitle]="emptyFailureTitle"
+  ></app-empty-state>
+  <app-empty-state
+    [isVisible]="success && !trailersUrl.length"
+    [errorDescription]="emptyNoTrailersDescription"
+    [errorTitle]="emptyNoTrailersTitle"
+  ></app-empty-state>
+</div>

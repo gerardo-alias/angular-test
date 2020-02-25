@@ -3,6 +3,9 @@ import { API_KEY, ENV, POSTER_URL } from '@config/settings';
 import envHosts from '@config/hosts.json';
 import endpoints from '@config/endpoints.json';
 
+// cosntants
+import { YOUTUBE, YOUTUBE_URL } from '@constants/constants';
+
 const buildBaseHost = (endpointName: string): string => {
   const baseHost = envHosts[ ENV ];
   const endpoint = endpoints[ endpointName ];
@@ -65,4 +68,8 @@ export const buildURL = ({ endpoint, params, query }: {
 
 export const buildPosterURL = (key?: string) => (
   key ? `${POSTER_URL}${key}` : ''
+);
+
+export const buildTrailerURL = (key?: string, site?: string): string => (
+  (key && site.toLowerCase() === YOUTUBE) ? `${YOUTUBE_URL}${key}` : ''
 );

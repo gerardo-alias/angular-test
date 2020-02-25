@@ -1,0 +1,9 @@
+@import 'current-theme.scss';
+
+.trailer-view {
+  &__container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+}

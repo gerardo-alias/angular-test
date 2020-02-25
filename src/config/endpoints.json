@@ -1,4 +1,5 @@
 {
   "search": "/search/movie",
+  "trailers": "/movie/{movieId}/videos",
   "trending": "/movie/popular"
 }

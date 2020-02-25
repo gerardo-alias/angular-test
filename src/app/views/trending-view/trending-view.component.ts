@@ -1,5 +1,6 @@
 // vendors
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 // model
 import { Movie, TrendingMoviesResponse } from '@model/movie.model';
@@ -16,20 +17,20 @@ import { formatText } from '@utils/i18n.utils';
   styleUrls: ['./trending-view.component.scss']
 })
 export class TrendingViewComponent implements OnInit {
-  currentPage = 1;
-  totalPages = 1;
   isFetching: boolean;
   error: boolean;
   success: boolean;
   movies: Movie[] = [];
-  searchValue = '';
   errorDescription: string = formatText('errors-trendingPageErrorDesc');
   errorTitle: string = formatText('errors-trendingPageErrorTitle');
   emptyTitle: string = formatText('errors-trendingPageEmptyTitle');
 
+  searchValueSubscription: Subscription;
+  currentPage = this.moviesService.currentPage;
+  searchValue = this.moviesService.currentSearchValue;
+  totalPages = this.moviesService.totalPages;
+
   constructor(private moviesService: MoviesService) {
-    moviesService.getSearchValue()
-      .subscribe(this.onSearchValueChange);
   }
 
   get emptyDescription() {
@@ -37,7 +38,12 @@ export class TrendingViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.searchValueSubscription = this. moviesService.getSearchValue().subscribe(this.onSearchValueChange);
     this.getMovies();
+  }
+
+  ngOnDestroy(): void {
+    this.searchValueSubscription.unsubscribe();
   }
 
   getMovies = (): void => {

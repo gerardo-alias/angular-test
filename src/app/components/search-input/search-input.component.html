@@ -2,6 +2,7 @@
   class="search-inpit__container">
   <input
     [placeholder]="placeholder"
+    [value]="searchValue || ''"
     class="search-inpit__input"
     (input)="onChangeText($event.target.value)"/>
 </div>

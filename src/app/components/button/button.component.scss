@@ -20,5 +20,20 @@
     letter-spacing: $fonts-letter-spacing-lg;
     color: $colors-font-active;
     text-transform: uppercase;
+
+    transition: transform $layout-animation-button-scale;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--transparent {
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    height: $font-size-xxxlg;
+    width: $font-size-xxxlg;
   }
 }

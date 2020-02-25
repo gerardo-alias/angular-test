@@ -27,11 +27,18 @@ export class MoviesService {
   searchValue: BehaviorSubject<string> = new BehaviorSubject<string>('');
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
+  // current state: This allows to keep state alive when unmounting a component
+  currentPage = 1;
+  currentSearchValue = '';
+  totalPages = 1;
+
   constructor(private http: HttpClient) { }
 
   processPage = (page: number, searchValue: string, data: Record<string, any>): TrendingMoviesResponse => {
     const mappedMoviesData = mapTrendingMovies(data, searchValue);
     this.pagesData[page] = mappedMoviesData;
+    this.currentPage = mappedMoviesData.page;
+    this.totalPages = mappedMoviesData.totalPages;
     return mappedMoviesData;
   }
 
@@ -46,6 +53,7 @@ export class MoviesService {
   }
 
   setSearchValue = (value: string) => {
+    this.currentSearchValue = value;
     this.searchValue.next(value);
   }
 

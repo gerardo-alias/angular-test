@@ -1,8 +1,11 @@
 <div class="button__container">
   <button
-    class="button__element"
+    [class]="buttonElementClass"
     (disabled)="disabled"
     (click)="onClick()">
+    <div *ngIf="buttonIconSrc">
+      <img [src]="buttonIconSrc" class="button__icon" alt="button icon">
+    </div>
     {{buttonText}}
   </button>
 </div>

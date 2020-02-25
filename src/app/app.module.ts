@@ -19,8 +19,10 @@ import { LoaderComponent } from '@components/loader/loader.component';
 import { EmptyStateComponent } from '@components/empty-state/empty-state.component';
 import { PaginationFooterComponent } from '@components/pagination-footer/pagination-footer.component';
 import { SearchInputComponent } from '@components/search-input/search-input.component';
+import { TrailerComponent } from '@components/trailer/trailer.component';
 
 // views
+import { TrailerViewComponent } from '@views/trailer-view/trailer-view.component';
 import { TrendingViewComponent } from '@views/trending-view/trending-view.component';
 
 @NgModule({
@@ -34,7 +36,9 @@ import { TrendingViewComponent } from '@views/trending-view/trending-view.compon
     LoaderComponent,
     EmptyStateComponent,
     PaginationFooterComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    TrailerViewComponent,
+    TrailerComponent
   ],
   imports: [
     AppRoutingModule,

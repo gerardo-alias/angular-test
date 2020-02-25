@@ -1,5 +1,5 @@
 // vendors
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 // services
 import { MoviesService } from '@services/movies.service';
@@ -13,7 +13,7 @@ import { formatText } from '@utils/i18n.utils';
   styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent implements OnInit {
-  searchValue: string;
+  @Input() searchValue: string;
   placeholder: string = formatText('searchInput-placeholder');
 
   constructor(private moviesService: MoviesService) { }

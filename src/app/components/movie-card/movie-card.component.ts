@@ -1,8 +1,10 @@
 // vendors
 import { Component, Input, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // constants
 import { APP_BREAKPOINT } from '@constants/constants';
+import { TRAILERS } from '@constants/routes';
 
 // model
 import { Movie } from '@model/movie.model';
@@ -18,7 +20,7 @@ export class MovieCardComponent implements OnInit {
   isApp: boolean;
   defaultImgPath = '/assets/images/film-poster-placeholder.png';
 
-  constructor() {
+  constructor(private router: Router) {
     this.onResize();
   }
 
@@ -28,5 +30,12 @@ export class MovieCardComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.isApp = window.innerWidth <  APP_BREAKPOINT;
+  }
+
+  handleClickAddFav() {
+  }
+
+  handleClickViewTrailer = (): void => {
+    this.router.navigate([ TRAILERS, { movieId: this.movie.id, movieName: this.movie.title } ]);
   }
 }

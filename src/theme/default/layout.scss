@@ -37,6 +37,12 @@ $layout-poster-height: calc($layout-poster-width / 2/3);
 $layout-poster-width: 150px;
 $layout-page-indicator-width: 75px;
 $layout-trending-page-max-width: 800px;
+$layout-trailer-height: 700px * (9 / 16);
+$layout-trailer-width: 700px;
+$layout-trailer-app-height: unquote('calc((100vw - (#{$layout-spacing-md} * 2)) * (9 / 16))');
+$layout-trailer-app-width: unquote('calc(100vw - (#{$layout-spacing-md} * 2))');
+
+$layout-animation-button-scale: 300ms ease-out;
 
 $layout_loader_height: 75px;
 $layout_loader_width: 75px;

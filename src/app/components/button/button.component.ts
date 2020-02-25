@@ -7,12 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() buttonText: string;
+  @Input() buttonIconSrc: string;
   @Input() disabled: boolean;
+  @Input() transparentContainer: boolean;
   @Input() onClick: () => any;
 
   constructor() { }
 
-  ngOnInit(): void {
+  get buttonElementClass(): string {
+    let modifiers = 'button__element';
+
+    if (this.transparentContainer) {
+      modifiers += ' button__element--transparent';
+    }
+
+    return modifiers;
   }
 
+  ngOnInit(): void {
+  }
 }

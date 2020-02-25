@@ -11,5 +11,11 @@
   },
   "searchInput": {
     "placeholder": "Search for some movies!"
+  },
+  "trailers": {
+    "noTrailersDescription": "No trailers could be found for this movie.",
+    "noTrailersTitle": "No trailers",
+    "failureDescription": "An error ocurred while retrieving trailers data. Please try again in a few minutes.",
+    "failureTitle": "Ups! an error has ocurred..."
   }
 }
